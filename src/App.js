@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import data from './Buttondet'
+import Button from './Button'
+import Forms from './Forms'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='container'>
+      <div className='text'>
+        <h1>Sign up with:</h1>
+        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+
+      </div>
+      <hr></hr>
+      <div className='block-item'>
+        {
+          data.map((e)=>{
+            return (
+              <Button imageSrc={e.imageSrc} name={e.name} bgcolor={e.bgcolor}/>
+
+            )
+          })
+        }
+
+      </div>
     </div>
-  );
+    <Forms />
+
+    </>
+  )
 }
 
-export default App;
+export default App
