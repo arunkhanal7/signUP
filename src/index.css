@@ -131,8 +131,14 @@ code {
     cursor: pointer;
     
     }
-.block-item {
+    .btn1{
+      background: red;
+    }
+/* .block-item {
       width: 50%;
       padding: 20px; 
-      }
+      } */
+.block-item{
+  margin-right: 20px;
+}
 
